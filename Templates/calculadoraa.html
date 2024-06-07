@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade humana do animal</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <main>
+        <section class="foto">
+            <br><br>
+            <h1></h1>
+            <br><br>
+        </section>
+
+        <br><br>
+        <center>
+        <section class="calc">
+            <div class="butca">
+                <h2 class="h2calc">Calculadora de idade em anos humanos</h2>
+                <form action="/result" method="post">
+
+
+                    <div class="form-control">
+                        <input class="input input-alt" placeholder="Espécie do animal" name="especie">
+                        <span class="input-border input-border-alt"></span>
+                    </div>
+
+                    <div class="form-control">
+                        <input class="input input-alt" placeholder="Idade do animal" step="1" type="number" name="idade">
+                        <span class="input-border input-border-alt"></span>
+                    </div><br><br>
+
+                    <button class="botcal" type="submit">Calcular idade</button><br><br>
+
+                    <div>{{resultado}}</div>
+                </form>
+
+            </div>
+        </section>
+        </center>
+    </main>
+
+</body>
+
+</html>

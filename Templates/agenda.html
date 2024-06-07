@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 para suportar caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a escala inicial e a largura da visualização para dispositivos móveis -->
+    <title>Agendamento de Consulta</title> <!-- Define o título da página -->
+</head>
+<body>
+    <h1>Agendar Consulta</h1> <!-- Título principal da página -->
+    <form action="/agenda" method="POST"> <!-- Formulário para adicionar um novo contato. O 'action' indica para onde os dados do formulário serão enviados e o 'method' indica o método HTTP usado (neste caso, POST) -->
+        <label for="nomea">Nome do animal:</label><br> <!-- Rótulo e campo de entrada para o nome do contato -->
+        <input type="text" id="nomea" name="nomea"><br> <!-- Campo de entrada para o nome do contato -->
+        <label for="nomet">Nome do tutor:</label><br> <!-- Rótulo e campo de entrada para o nome do contato -->
+        <input type="text" id="nomet" name="nomet"><br> <!-- Campo de entrada para o nome do contato -->
+        <label for="data">Data e Horário:</label><br> <!-- Rótulo e campo de entrada para o email do contato -->
+        <input type="datetime-local" id="data" name="data"><br> <!-- Campo de entrada para o email do contato -->
+        <label for="sintomas">Sintomas:</label><br> <!-- Rótulo e campo de entrada para o nome do contato -->
+        <input type="text" id="sintomas" name="sintomas"><br> <!-- Campo de entrada para o nome do contato -->
+        </br>
+        <input type="submit" value="Agendar"> <!-- Botão de envio do formulário -->
+    </form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 para suportar caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a escala inicial e a largura da visualização para dispositivos móveis -->
+    <title>Lista de Contatos</title> <!-- Define o título da página -->
+</head>
+<body>
+    <h1>Lista de Contatos</h1> <!-- Título principal da página -->
+    <ul>
+        {% for contato in contatos %} <!-- Loop através de cada contato na lista de contatos -->
+        <li>{{ contato[1] }} - {{ contato[2] }} - {{ contato[3] }} - {{ contato[4] }} - {{ contato[5] }} - {{ contato[6] }} <!-- Exibe as informações do contato, incluindo o nome, número de telefone e email. Se for favorito, adiciona um marcador -->
+            <ul>
+                <li><a href="/editar_contato/{{ loop.index0 }}">Editar</a></li> <!-- Link para editar o contato -->
+                <li><a href="/apagar_contato/{{ loop.index0 }}">Apagar</a></li> <!-- Link para apagar o contato -->
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="/adicionar_contato">Adicionar Contato</a> <!-- Link para adicionar um novo contato -->
+    <br><br>
+    <a href="/calculadora">Calculadora de Mililitros</a>
+</body>
+</html>

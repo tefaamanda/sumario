@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de miligramas/peso corporal do medicamento</title>
+    <link rel="stylesheet" href="../static/css/estilo.css">
+</head>
+
+<body>
+    <main>
+        <section>
+            <br><br>
+            <h1>Calculadora de miligramas/peso corporal do medicamento</h1>
+            <br><br>
+        </section>
+
+        <section>
+            <h3 class="tit2">Como funciona</h3>
+            <p>Calcular a quantidade de medicamento
+                a ser administrada a um animal com base
+                no seu peso corporal e na dose recomendada.</p>
+        </section>
+
+        <br><br>
+        <center>
+        <section class="calc">
+            <div class="butca">
+                <h2 class="h2calc">Calculadora de miligramas/peso corporal do medicamento</h2>
+                <form action="/resultado" method="post">
+                    <div class="form-control">
+                        <input class="input input-alt" placeholder="Peso (kg) do animal." step="0.1" type="number" id="peso" name="peso">
+                        <span class="input-border input-border-alt"></span>
+                    </div>
+
+                    <div class="form-control">
+                        <input class="input input-alt" placeholder="Dose recomendada do medicamento." step="0.01" type="number" id="dose_r" name="dose_r">
+                        <span class="input-border input-border-alt"></span>
+                    </div><br><br>
+
+                    <button class="botcal" type="submit">Calcular Dose</button><br><br>
+
+
+                </form>
+
+            </div>
+        </section>
+        </center>
+    </main>
+ <div id="resultado">
+        {% if resultado %} <!-- Verifica se há um resultado a ser exibido -->
+            {{ resultado }} <!-- Exibe o resultado da verificação (par ou ímpar) -->
+        {% endif %}
+    </div>
+</body>
+
+</html>
